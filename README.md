@@ -126,7 +126,7 @@ Após executar o projeto, este é o resultado esperado no navegador:
   ![Página Sobre](./public/img/sobre.jpg)
 
 - Lista de Livros:
-  ![Lista de Livros](./public/img/livroscadastrados.jpg)
+  ![Lista de Livros](./public/img/livrosCadastrados.jpg)
 
 - Cadastro de Livros:
   ![Cadastro de Livros](./public/img/cadastro.jpg)
