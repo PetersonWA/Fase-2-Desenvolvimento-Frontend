@@ -13,7 +13,7 @@ const BookList = ({ books, onDeleteBook, onEditBook }) => {
             {books.length === 0 ? (
                 <div    className='book-list-card'>
                     <h1>Livros cadastrados</h1>
-                    <p><i>Não há livros cadastrados !!</i></p>
+                    <p><i>Adicione um livro para começar !!</i></p>
                 </div>
             ) : (
             <Box className="book-list-card">

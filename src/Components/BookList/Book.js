@@ -90,14 +90,12 @@ const Book = ({ book, onDelete, onEdit }) => {
           value={editedBook.readAt}
           onChange={handleInputChange}
           label="data"
-          InputLabel={{ 
-          shrink: true
-          }}
+          InputLabelProps={{shrink: true}}
           variant="outlined"
           style={{ marginBottom: "10px" }}
         />
-        <Button variant='outlined' color='success' size="large" onClick={handleSave} style={{ marginLeft: "10px" }}><GiConfirmed /></Button>
-        <Button variant='outlined' color='error' size="large" onClick={() => setIsEditing(false)} style={{ marginLeft: "10px" }}><ImCancelCircle /></Button>
+        <Button aria-label={`salvar livro  ${book.id}`} variant='outlined' color='success' size="large" onClick={handleSave} style={{ marginLeft: "10px" }}><GiConfirmed /></Button>
+        <Button aria-label={`cancelar edição ${book.id}`} variant='outlined' color='error' size="large" onClick={() => setIsEditing(false)} style={{ marginLeft: "10px" }}><ImCancelCircle /></Button>
       </li>
       ) : (
         <li>
@@ -105,8 +103,8 @@ const Book = ({ book, onDelete, onEdit }) => {
           <p>Autor: {book.author}</p>
           <p>Gênero: {book.genre}</p>
           <p>Data: {new Date(book.readAt).toLocaleDateString()}</p>
-          <Button variant="outlined" color='black' size="large" onClick={() => setIsEditing(true)} style={{ marginLeft: "10px" }}><LuPaintbrush /></Button>
-          <Button variant='outlined' color='black' size="large" onClick={handleDelete} style={{ marginLeft: "10px" }}><FaRegTrashCan /></Button>
+          <Button aria-label={`editar livro ${book.id}`} variant="outlined" color='black' size="large" onClick={() => setIsEditing(true)} style={{ marginLeft: "10px" }}><LuPaintbrush /></Button>
+          <Button aria-label={`excluir livro ${book.id}`} variant='outlined' color='black' size="large" onClick={handleDelete} style={{ marginLeft: "10px" }}><FaRegTrashCan /></Button>
         </li>
       )}
       </>

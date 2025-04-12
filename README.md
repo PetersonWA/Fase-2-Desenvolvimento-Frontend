@@ -13,6 +13,8 @@ A aplicação utiliza as seguintes tecnologias:
 - **Material-UI**: Para estilização e componentes visuais.
 - **HTML5 e CSS3**: Para a estrutura e estilização.
 
+Além disso, o projeto inclui **testes unitários** para garantir a qualidade do código e **testes end-to-end (E2E)** utilizando o **Cypress** para validar o comportamento da aplicação.
+
 ---
 
 ## Funcionalidades
@@ -30,20 +32,40 @@ A aplicação utiliza as seguintes tecnologias:
 A estrutura do projeto é organizada da seguinte forma:
 
 ```
-src/
-|── App.js
-├── App.module.css
-├── index.css
-├── index.js
-├── reportWebVitals.js
-└── Components/
-    ├── BookForm/
-    │   └── BookForm.js
-    ├── BookList/
-    │   ├── Book.js
-    │   └── BookList.js
-    └── NavBar/
-        └── NavBar.js
+projetofase1/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── img/
+│       ├── paginaInicial.jpg
+│       ├── sobre.jpg
+│       ├── livrosCadastrados.jpg
+│       └── cadastro.jpg
+├── src/
+│   ├── App.js
+│   ├── App.module.css
+│   ├── index.css
+│   ├── index.js
+│   ├── reportWebVitals.js
+│   ├── Components/
+│   │   ├── BookForm/
+│   │   │   └── BookForm.js
+│   │   ├── BookList/
+│   │   │   ├── Book.js
+│   │   │   └── BookList.js
+│   │   └── NavBar/
+│   │       └── NavBar.js
+│   └── tests/
+│       ├── unit/
+│       │   └── BookForm.test.js
+│       └── e2e/
+│           └── cypress/
+│               ├── integration/
+│               │   └── bookForm.spec.js
+│               └── support/
+│                   └── commands.js
+├── package.json
+└── README.md
 ```
 
 ---
@@ -111,7 +133,41 @@ Os componentes estão localizados no diretório `./src/Components` e possuem as 
    ```bash
    npm start
    ```
-6. Acesse a aplicação no navegador em [http://localhost:3000](http://localhost:3000).
+6. Execute os testes unitários:
+   ```bash
+   npm test
+   ```
+7. Execute os testes E2E com o Cypress:
+   ```bash
+   npx cypress open
+   ```
+8. Acesse a aplicação no navegador em [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Testes
+
+### Testes Unitários
+Os testes unitários foram implementados para validar a lógica dos componentes e funções principais da aplicação. Eles utilizam a biblioteca **Jest** e podem ser executados com o seguinte comando:
+
+```bash
+npm test
+```
+
+### Testes End-to-End (E2E)
+Os testes E2E foram implementados utilizando o **Cypress** para garantir que os fluxos principais da aplicação funcionem corretamente. Para executar os testes E2E, siga os passos abaixo:
+
+1. Certifique-se de que o servidor de desenvolvimento está em execução:
+   ```bash
+   npm start
+   ```
+
+2. Em outra janela do terminal, execute o Cypress:
+   ```bash
+   npx cypress open
+   ```
+
+3. No painel do Cypress, selecione o teste que deseja executar.
 
 ---
 
@@ -137,8 +193,8 @@ Após executar o projeto, este é o resultado esperado no navegador:
 
 - Implementar autenticação de usuários.
 - Adicionar funcionalidade de busca e filtro na lista de livros.
-- Melhorar o design da interface com bibliotecas como Material-UI ou Tailwind CSS.
-- Criar testes unitários para os componentes principais.
+- Melhorar o design da interface com bibliotecas como Tailwind CSS.
+- Criar mais testes para cobrir cenários adicionais.
 
 ---
 

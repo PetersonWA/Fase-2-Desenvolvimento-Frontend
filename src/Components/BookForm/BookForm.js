@@ -123,7 +123,7 @@ export default function BookForm({ onAddBook }) {
           fullWidth
           color="gray"
           margin="normal"
-          placeholder="Lido na data"
+          label="Lido na data"
           name="readAt"
           type="date"
           value={book.readAt}
