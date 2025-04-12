@@ -57,13 +57,12 @@ projetofase1/
 │   │       └── NavBar.js
 │   └── tests/
 │       ├── unit/
-│       │   └── BookForm.test.js
+│       │   |── Book.test.js
+│       │   |── BookForm.test.js
+|       |   └── BookList.test.js
 │       └── e2e/
-│           └── cypress/
-│               ├── integration/
-│               │   └── bookForm.spec.js
-│               └── support/
-│                   └── commands.js
+│           └── App.cy.js/
+│      
 ├── package.json
 └── README.md
 ```
